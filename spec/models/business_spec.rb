@@ -5,4 +5,9 @@ describe Business do
 		Business.new should_not be_valid
 		Business.new(name: "SHWEET Restaurant").should be_valid
 	end
+
+	it 'has a location' do
+		Business.new should_not be_valid
+		Business.new(name: nil, location: "San Francisco")
+	end
 end
