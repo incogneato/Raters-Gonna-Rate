@@ -1,5 +1,7 @@
 <div class="show_business">
 	<h4><%= @business.name %></h4>
 	<p><%= @business.location %></p>
-	<%= link_to 'Home', businesses_path %> &nbsp; <%= link_to 'Edit', edit_business_path(@business) %>
+	<%= link_to 'Home', :root %> &nbsp; 
+	<%= link_to 'Edit', edit_business_path(@business) %> &nbsp; 
+	<%= link_to 'Delete', @business, method: :delete, data: { confirm: "Really delete business?" }%>
 </div>

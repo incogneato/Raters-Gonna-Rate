@@ -17,7 +17,7 @@ class BusinessesController < ApplicationController
 			if @business.save
 				redirect_to @business, notice: "Business successfully added."
 			else
-				redirect_to :root, flash: "Apologies, we could not add your business. Our bad."
+				redirect_to :root, flash[:error] = "Apologies, we could not add your business. Our bad."
 			end
 	end
 
@@ -26,17 +26,17 @@ class BusinessesController < ApplicationController
 	end
 
 	def update
-		@business = Business.find(params[:id])
+		@business = Business.find(params[:id]) 	
 		if @business.update_attributes(params[:business])
 			redirect_to @business, notice: "Business successfully updated."
 		else
-			redirect_to :back, flash: "Apologies, we could not update your business."
+			redirect_to :root, flash[:error] = "Apologies, we could not update your business."
 		end
 	end
 
 	def destroy
 		@business = Business.find(params[:id])
 		@business.destroy
-		redirect_to root_url, notice: "Business successfully deleted."
+		redirect_to businesses_url
 	end
 end

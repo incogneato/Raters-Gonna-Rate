@@ -29,6 +29,10 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'twitter-bootstrap-rails' #rails g bootstrap:install || #bootstrap-less?
+  gem 'therubyracer'            #rails g bootstrap:themed products -f
+  gem 'less-rails'              
+  gem 'simple_form' #rails g simple_form:install --bootstrap
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
