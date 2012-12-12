@@ -1,13 +1,12 @@
-<br/>
 <h3>All Businesses</h3>
 
 <div>
 	<% @businesses.each do |business| %>
-	<ul style="list-style: none;">
+	<ul id="businesses_list">
 		<li>
 			<%= link_to business.name, business %> &rarr;
-			<%= business.location %> &nbsp; 
-			<%= link_to 'Edit', edit_business_path(business) %>  &nbsp; 
+			<%= business.location %> &middot; 
+			<%= link_to 'Edit', edit_business_path(business) %>  &middot; 
 			<%= link_to 'Delete', business, method: :delete, data: { confirm: "Really delete business?"} %> 
 		</li>
 	</ul>
