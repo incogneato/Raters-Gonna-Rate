@@ -1,0 +1,15 @@
+<h3>Add New Business</h3>
+
+<% if @business.errors.any? %>
+	<ul style="list-style: none;">
+		<% @business.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= form_for(@business) do |f| %>
+	<%= f.text_field :name, :placeholder => 'Name' %><br />
+	<%= f.text_field :location, :placeholder => 'Location' %><br />
+	<%= f.submit 'Add Business' %>
+<% end %>
