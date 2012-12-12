@@ -1,4 +1,4 @@
 class Business < ActiveRecord::Base
-	attr_accessible :name
-	validates_presence_of :name
+	attr_accessible :name, :location
+	validates_presence_of :name, :location
 end
