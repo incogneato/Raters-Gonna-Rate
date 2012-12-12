@@ -1,6 +1,7 @@
 <div class="show_business">
 	<h4><%= @business.name %></h4>
 	<p>Location: <span class="location"><%= @business.location %></span></p>
+	<p>Rating: <span class="review"><%= @business.rating %></span></p>
 	<p>Review: <span class="review"><%= @business.review %></span></p>
 	<%= link_to 'Home', :root %> &nbsp; 
 	<%= link_to 'Edit', edit_business_path(@business) %> &nbsp; 
