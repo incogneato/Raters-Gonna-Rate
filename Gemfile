@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
+gem 'devise'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -14,6 +16,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'shoulda-matchers'
   gem 'fakeweb'
+  gem 'simplecov'
 end
 
 group :production do
@@ -32,7 +35,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
 
 
 # To use ActiveModel has_secure_password
