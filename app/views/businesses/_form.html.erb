@@ -11,10 +11,7 @@
 <%= form_for(@business) do |f| %>
 	<%= f.text_field :name, :placeholder => 'Name' %><br />
 	<%= f.text_field :location, :placeholder => 'Location' %><br />
-	<%#= f.number_field :rating, :placeholder => 'Rating' %>
-	<%#= collection_select(:rating, :category_id, Business.all, :id, :name )%>
-  <%= select_tag("rating", options_for_select([['Great (5)', '5'],
-                ['Good (4)', '4'],['Standard (3)','3'], ['Mediocre (2)', '2'], ['Poor (1)', '1']], '5')) %><br />
+  <%= f.number_field :rating, :placeholder => 'Rate this business.' %><br />	
 	<%= f.text_area :review, :placeholder => 'Write your review here.' %><br />
 	<%= f.submit 'Add Business' %>
 <% end %>
